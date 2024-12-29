@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Freddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pattern-left"></div>
+    <div class="pattern-right"></div>
+    <div class="content">
+        <div class="header">
+            <div class="logo">🍕 Пиццерия Мишки Фредди</div>
+            <button id="mainMenu">Меню</button>
+            <button id="cartButton">Корзина</button>
+            <button id="faqButton">FAQ</button>
+        </div>
+
+        <div id="pizzaSelection" class="pizza-grid">
+            <!-- Карточки пицц -->
+            <div class="pizza-item">
+                <img src="img/1.png" alt="Незабываемая пицца Фредди Фазбера">
+                <p>Незабываемая пицца Фредди Фазбера</p>
+                <button class="order-button" data-pizza="Незабываемая пицца Фредди Фазбера">Заказать!</button>
+            </div>
+            <div class="pizza-item">
+                <img src="img/2.png" alt="Мясной рай Бонни">
+                <p>Мясной рай Бонни</p>
+                <button class="order-button" data-pizza="Мясной рай Бонни">Заказать!</button>
+            </div>
+            <div class="pizza-item">
+                <img src="img/3.png" alt="Томатное проишествие на кухне Чики">
+                <p>Томатное проишествие на кухне Чики</p>
+                <button class="order-button" data-pizza="Томатное проишествие на кухне Чики">Заказать!</button>
+            </div>
+            <div class="pizza-item">
+                <img src="img/4.png" alt="Необычная жизнь Спрингтрапа">
+                <p>Необычная жизнь Спрингтрапа</p>
+                <button class="order-button" data-pizza="Необычная жизнь Спрингтрапа">Заказать!</button>
+            </div>
+            <div class="pizza-item">
+                <img src="img/5.png" alt="Особая пицца золотого Фредди">
+                <p>Особая пицца золотого Фредди</p>
+                <button class="order-button" data-pizza="Особая пицца золотого Фредди">Заказать!</button>
+            </div>
+            <div class="pizza-item">
+                <img src="img/6.png" alt="6-ая ночь в пиццерии Фредди Фазбера">
+                <p>6-ая ночь в пиццерии Фредди Фазбера</p>
+                <button class="order-button" data-pizza="6-ая ночь в пиццерии Фредди Фазбера">Заказать!</button>
+            </div>
+            <!-- Новые пиццы -->
+            <div class="pizza-item">
+                <img src="img/7.png" alt="Острые приключения Фокси Пирата">
+                <p>Острые приключения Фокси Пирата</p>
+                <button class="order-button" data-pizza="Острые приключения Фокси Пирата">Заказать!</button>
+            </div>
+            <div class="pizza-item">
+                <img src="img/8.png" alt="Тянущаяся Песня Марионетки">
+                <p>Тянущаяся Песня Марионетки</p>
+                <button class="order-button" data-pizza="Тянущаяся Песня Марионетки">Заказать!</button>
+            </div>
+        </div>        
+
+        <!-- Секция оформления заказа -->
+        <div class="order-form" id="orderForm" style="display: none;">
+            <h3>Оформление заказа</h3>
+            <div class="form-container">
+                <div class="order-type">
+                    <button class="delivery-button selected">Доставка</button>
+                    <button class="restaurant-button">В ресторане</button>
+                </div>
+                <p id="selectedPizza">Вы выбрали: </p>
+                <input type="text" id="nameInput" placeholder="Имя Фамилия" required>
+                <input type="tel" id="phoneInput" placeholder="+7 (XXX) XXX-XX-XX" required>
+                <input type="text" id="addressInput" placeholder="Адрес доставки">
+                <input type="time" id="timeInput" required>
+                <input type="number" id="quantityInput" placeholder="Количество" min="1" value="1">
+                <button class="add-to-cart">Добавить в корзину</button>
+                <button id="backToMenu">Назад</button>
+            </div>
+        </div>
+
+        <!-- Секция корзины -->
+        <div class="cart-section" id="cartSection" style="display: none;">
+            <h2>Корзина</h2>
+            <div class="cart-items" id="cartItems"></div>
+            <button id="confirmOrder" class="submit-order">Оформить заказ</button>
+        </div>
+
+        <!-- Модальное окно FAQ -->
+        <div id="faqModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>FAQ</h2>
+                <p>Сайт создан по мотивам игры Five Nights at Freddy's.</p>
+                <p>кратко: FNaF — франшиза компьютерных игр, созданная разработчиком игр Скоттом Коутоном.
+                Основная серия состоит из компьютерных игр, действие которых происходит в местах, связанных с вымышленной пиццерией «Freddy Fazbear’s Pizza», названной так в честь её талисмана — аниматронного медведя Фредди Фазбера.</p>
+                <p>Авторы: Канин Freddy Виталий Сергеевич</p>
+                <p>Ветшанова Mangle Маргарита Николаевна</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
